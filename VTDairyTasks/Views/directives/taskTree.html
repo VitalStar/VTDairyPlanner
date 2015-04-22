@@ -1,0 +1,9 @@
+﻿<div>Test Directive</div>
+<div ng-repeat="task in treeTasks" class="btn-group btn-group-justified" role="group">
+    <div parentid="{{task.Id}}" class="btn-group" role="group">
+        <button type="button" class="btn btn-default" ng-click="ShowChildTasks(task)">
+            {{task.Title}}<br />
+            {{task.Description}}
+        </button>
+    </div>
+</div>

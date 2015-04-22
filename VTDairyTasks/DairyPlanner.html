@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="dairyApp">
+    <head>
+        <title></title>
+        <link href="Content/CSS/task-common.css" rel="stylesheet" />
+        <link href="Content/CSS/bootstrap.css" rel="stylesheet" />
+        <link href="Content/CSS/bootstrap-theme.css" rel="stylesheet" />
+
+        <script type="text/javascript" src="/Scripts/common/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/Scripts/common/jquery-ui-1.10.4.custom.js"></script>
+        <script src="Scripts/common/bootstrap.js"></script>
+        <script type="text/javascript" src="/Scripts/common/angular.min.js"></script>
+        <script type="text/javascript" src="/Scripts/common/angular-route.js"></script>
+        <script type="text/javascript" src="/Scripts/app.js"></script>
+        <script type="text/javascript" src="/Scripts/controllers/PlanListController.js"></script>
+        <script type="text/javascript" src="/Scripts/controllers/HistoryListController.js"></script>
+        <script type="text/javascript" src="/Scripts/controllers/TreeController.js"></script>
+        <script type="text/javascript" src="/Scripts/services/TaskService.js"></script>
+        <script type="text/javascript" src="Scripts/services/DayService.js"></script>
+        <script type="text/javascript" src="/Scripts/controllers/TreeController.js"></script>
+        <script type="text/javascript" src="/Scripts/directive/TaskTree.js"></script>        
+        <script type="text/javascript" src="Scripts/directive/DayDairy.js"></script>
+        <script type="text/javascript" src="Scripts/directive/ListTaskTime.js"></script>
+
+    </head>
+    <body ng-controller="TreeController">
+        <ul class="main-menu">
+            <li><a href="#plan"> Plan </a></li>
+            <li><a href="#history"> History </a></li>
+        </ul>
+        <div id="main">
+            <div ng-view></div>
+        </div>
+        <div class="task-tree" />
+ 
+    </body>
+</html>
+
+<!--<script type="text/ng-template" id="tree_item_renderer.html">
+    <button ng-click="add(data)">+</button>
+    {{ task.Title }}
+    <button ng-click="add(data)">Add node</button>
+    <button ng-click="delete(data)" ng-show="data.nodes.length > 0">Delete nodes</button>
+    <ul>
+        <li ng-repeat="task in task.nodes" ng-include="'tree_item_renderer.html'"></li>
+    </ul>
+
+</script>
+
+<ul ng-controller="TreeController">
+    <li ng-repeat="task in tasks">{{ task.Title }}  - {{ task.Description}}</li>
+</ul>-->

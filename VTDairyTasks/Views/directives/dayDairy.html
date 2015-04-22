@@ -1,0 +1,12 @@
+﻿<div>
+    <ul class="dairy-list">
+        {{ day.Date }}
+        <li ng-repeat="taskTime in day.Tasks" class="dairy-list-item col-md-4">
+                        
+            <list-task-time taskTime="{{ day.taskTime }}"/>
+        </li>
+        <li ng-if="taskTimeList.length == 0">
+            <strong>No results found...</strong>
+        </li>
+    </ul>
+</div>
